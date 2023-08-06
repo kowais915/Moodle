@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
     return (
 
@@ -7,7 +9,7 @@ const Footer = () => {
                     <div className="grid grid-flow-col gap-4">
                         <a className="link link-hover" href="/about">About us</a> 
                         <a className="link link-hover" href="https://github.com/kowais915/Moodle">Code</a> 
-                        <a className="link link-hover" href="/">Home</a>
+                        <Link className="link link-hover" href="/">Home</Link>
                     </div> 
                     
                     <div>
