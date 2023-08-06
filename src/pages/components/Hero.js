@@ -7,7 +7,7 @@ const Hero = () => {
                     <img src="img.jpeg" className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
                     <h1 className="text-5xl font-bold">Moodle - your mood tracker.</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <p className="py-6">Your ultimate solution to keep track of your changing moods.</p>
                     <button className="btn btn-primary"><Link href="/dashboard">Get Started</Link></button>
                     </div>
                 </div>
