@@ -6,7 +6,7 @@ const Divider = () => {
         <>
         
         <div className="flex flex-col w-full">
-            <div className="grid h-20 card text-lg rounded-box place-items-center">How it works?</div> 
+            <div className="grid h-20 card text-lg rounded-box place-items-center text-3xl uppercase">How it works?</div> 
       
            
         </div>
