@@ -8,7 +8,7 @@ const Hero = () => {
                     <div>
                     <h1 className="text-5xl font-bold">Moodle - your mood tracker.</h1>
                     <p className="py-6">Your ultimate solution to keep track of your changing moods.</p>
-                    <button className="btn btn-primary"><Link href="/dashboard">Get Started</Link></button>
+                    <Link href="/dashboard" className="btn btn-primary">Get Started</Link>
                     </div>
                 </div>
             </div>
