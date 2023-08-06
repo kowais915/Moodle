@@ -1,18 +1,23 @@
+import Divider from './components/Divider'
+import Hero from './components/Hero'
 import Layout from './components/Layout'
-import Main from './components/Main'
+import Working from './components/Working'
 
 
 
 
 export default function Home() {
   return (
-    <main className={``}>
+    <main className={`min-h-full`}>
 
       <Layout>
 
-          <Main/>
+          <Hero/>
+            <Divider/>
+          <Working/>
 
       </Layout>
+
     </main>
   )
 }
