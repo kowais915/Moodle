@@ -8,7 +8,7 @@ import Working from './components/Working'
 
 export default function Home() {
   return (
-    <main className={`min-h-full`}>
+    <main className={`min-h-full w-fit`}>
 
       <Layout>
 
