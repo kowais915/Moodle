@@ -8,6 +8,7 @@ import {useRouter} from 'next/router'
 const Dashboard = () => {
 
     const router = useRouter();
+    const [data, setData] = useState('')
    
 
     const [feelings, setFeelings] = useState({
@@ -18,18 +19,43 @@ const Dashboard = () => {
         neutral: false,
     });
 
-    const handleSubmit =(feeling)=>{
+    const handleSubmit = async(feeling)=>{
       
        
-        console.log({
-          ...feelings,
-          [feeling]: true, 
-        })
+        // console.log({
+        //   ...feelings,
+        //   [feeling]: true, 
+        // })
 
-        router.push("/thankyou")
+        const data = {...feelings, [feeling]: true};
+        console.log("DATA::", data);
+
+        
+        
+        const resp = await fetch("http://localhost:3001/api/moods", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({...data})
+        });
+        const json = resp.json();
+
+
+        
+        return data;
 
 
     }
+
+    
+
+    
+
+    
+
+    
+
+  
+
 
 
      
@@ -44,8 +70,7 @@ const Dashboard = () => {
                 <div className="buttons flex flex-col  mb-14 items-center  gap-3 sm:flex sm:flex-row sm:justify-center sm:m-15 sm:gap-3 sm:p-36">
                     <button className="btn w-40 "
                          onClick={()=>{
-                            
-                            setFeelings({...feelings, happy: true})
+                       
                             handleSubmit('happy')
                         
                     }}
