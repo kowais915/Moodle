@@ -40,7 +40,7 @@ const Dashboard = () => {
         
  
                 <div className="buttons flex flex-col  mb-14 items-center  gap-3 sm:flex sm:flex-row sm:justify-center sm:m-15 sm:gap-3 sm:p-36">
-                    <button className="btn"
+                    <button className="btn w-40 "
                          onClick={(e)=>{
                      
                            setHappy()
@@ -51,7 +51,7 @@ const Dashboard = () => {
                         Happy
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </button>
-                    <button className="btn" 
+                    <button className="btn w-40" 
                          onChange={(e)=>{
                      
                             setSad(true)
@@ -62,7 +62,7 @@ const Dashboard = () => {
                         Sad
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </button>
-                    <button className="btn"
+                    <button className="btn w-40"
                          onChange={(e)=>{
                      
                             setNeutral(true)
@@ -73,7 +73,7 @@ const Dashboard = () => {
                         Neutral
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </button>
-                    <button className="btn" onChange={(e)=>{
+                    <button className="btn w-40" onChange={(e)=>{
                      
                             setAnxious(true)
                             handleSubmit();
@@ -82,7 +82,7 @@ const Dashboard = () => {
                         Anxious
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </button>
-                    <button className="btn"  onChange={(e)=>{
+                    <button className="btn w-40"  onChange={(e)=>{
                      
                      setAngry(true)
                      handleSubmit();
