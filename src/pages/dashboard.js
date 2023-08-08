@@ -34,12 +34,12 @@ const Dashboard = () => {
     return ( 
         <Layout>
 
-            <div className="text-center text-7xl mt-36 -mb-36">
+            <div className="p-20 flex text-2xl -mb-5 text-center justify-center sm:text-center sm:text-7xl sm:mt-20 sm:-mb-36">
                 How are you feeling today?
             </div>
         
  
-                <div className="buttons flex flex-row justify-center m-28 gap-3 p-36">
+                <div className="buttons flex flex-col  mb-14 items-center  gap-3 sm:flex sm:flex-row sm:justify-center sm:m-15 sm:gap-3 sm:p-36">
                     <button className="btn"
                          onClick={(e)=>{
                      
