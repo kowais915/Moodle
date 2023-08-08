@@ -56,7 +56,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <input type="checkbox" className="toggle toggle-warning" checked />
+  <input type="checkbox" className="toggle toggle-warning"  />
   </div>
 </div>
             </>
