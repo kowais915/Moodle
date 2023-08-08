@@ -6,7 +6,7 @@ const Thankyou = () => {
         <>
             <Layout>
 
-                    <div className="flex flex-col justify-center text-4xl p-40 m-10 text-center">
+                    <div className="flex p-20 text-md mb-52 sm:flex-col sm:justify-center sm:text-4xl sm:p-40 sm:m-10 sm:text-center">
 
                         <h1>Thank you. You have sucessfully registered your mood for today.</h1>
 

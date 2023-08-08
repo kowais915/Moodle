@@ -1,5 +1,5 @@
 import Layout from "./components/Layout";
-import {useState } from 'react';
+import {useState, useEffect } from 'react';
 import {useRouter} from 'next/router'
 
 
@@ -8,27 +8,29 @@ import {useRouter} from 'next/router'
 const Dashboard = () => {
 
     const router = useRouter();
-    const [happy, setHappy] = useState(false);
-    const [sad, setSad] = useState(false);
-    const [angry, setAngry] = useState(false);
-    const [anxious, setAnxious] = useState(false);
-    const [neutral, setNeutral] = useState(false);
+   
 
+    const [feelings, setFeelings] = useState({
+        happy: false,
+        sad: false,
+        angry: false,
+        anxious: false,
+        neutral: false,
+    });
 
-    const handleSubmit =(e)=>{
+    const handleSubmit =(feeling)=>{
+      
        
         console.log({
-            happy,
-            sad,
-            angry,
-            anxious,
-            neutral
+          ...feelings,
+          [feeling]: true, 
         })
 
         router.push("/thankyou")
 
 
     }
+
 
      
     return ( 
@@ -41,9 +43,10 @@ const Dashboard = () => {
  
                 <div className="buttons flex flex-col  mb-14 items-center  gap-3 sm:flex sm:flex-row sm:justify-center sm:m-15 sm:gap-3 sm:p-36">
                     <button className="btn w-40 "
-                         onClick={(e)=>{
-                     
-                           setHappy()
+                         onClick={()=>{
+                            
+                            setFeelings({...feelings, happy: true})
+                            handleSubmit('happy')
                         
                     }}
                     
@@ -52,10 +55,10 @@ const Dashboard = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </button>
                     <button className="btn w-40" 
-                         onChange={(e)=>{
+                         onClick={(e)=>{
                      
-                            setSad(true)
-                            handleSubmit();
+                            setFeelings({...feelings, sad: true})
+                            handleSubmit('sad')
                         
                     }}
                     >
@@ -63,29 +66,30 @@ const Dashboard = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </button>
                     <button className="btn w-40"
-                         onChange={(e)=>{
+                         onClick={(e)=>{
                      
-                            setNeutral(true)
-                            handleSubmit();
-                        
+                            setFeelings({...feelings, neutral: true})
+                            handleSubmit('neutral')
                     }}
                     >
                         Neutral
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </button>
-                    <button className="btn w-40" onChange={(e)=>{
+                    <button className="btn w-40" onClick={(e)=>{
                      
-                            setAnxious(true)
-                            handleSubmit();
+                     setFeelings({...feelings, anxious: true})
+                     handleSubmit('anxious')
+                           
                         
                     }}>
                         Anxious
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                     </button>
-                    <button className="btn w-40"  onChange={(e)=>{
+                    <button className="btn w-40"  onClick={(e)=>{
                      
-                     setAngry(true)
-                     handleSubmit();
+                            setFeelings({...feelings, angry: true})
+                            handleSubmit('angry')
+                   
                  
              }}>
                         Angry
