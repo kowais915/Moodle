@@ -35,7 +35,7 @@ const Navbar = () => {
     </div>
 
     <div className="brand">
-        <Link className="btn btn-ghost normal-case text-xl  -ml-1" href="/">Moodle</Link>
+        <Link className="btn btn-ghost normal-case text-xl  -ml-4" href="/">Moodle</Link>
     </div>
 
     </div>
